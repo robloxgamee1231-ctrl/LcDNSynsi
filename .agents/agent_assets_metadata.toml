@@ -1,0 +1,46 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "_PR60I0JK9vYo91wcsFSo"
+uri = "file://project.zip"
+type = "unspecified"
+title = "Project Files (ZIP)"
+
+[[outputs]]
+id = "qKkBdo_RtyRbeYq6cPjxo"
+uri = "file://project_code.zip"
+type = "unspecified"
+title = "Project Code (ZIP, no screenshots)"
+
+[[outputs]]
+id = "QyJJYBKgNkS1DONtvh2uV"
+uri = "file://screenshots/sd2_test.mp4"
+type = "video"
+title = "sd2 test — a cat playing piano (5s, 720p, 16:9)"
+
+[[outputs]]
+id = "MS2bw8VMpMeyKxsGEOL0n"
+uri = "file://workspace.zip"
+type = "unspecified"
+title = "Full Workspace Zip"
+
+[[outputs]]
+id = "vDLbubMw697fpuJuZUR6w"
+uri = "file://bots_code.zip"
+type = "unspecified"
+title = "Bot Code (244 KB)"
+
+[[outputs]]
+id = "-IEQlKIwqngdlE-cKGegK"
+uri = "file://bot_50mb.py"
+type = "unspecified"
+title = "bot.py (50 MB)"
+description = "Your full Discord bot code padded to 50 MB."
+
+[[outputs]]
+id = "fk9deHRBByZqKocy8ZDBV"
+uri = "file://bot.py"
+type = "unspecified"
+title = "bot.py — Discord Bot Code"
+description = "Your full Discord bot source code ready to upload to z.ai."

@@ -1,0 +1,2 @@
+- [Discord bot.py missing modules](discord-bot-missing-modules.md) — bot.py referenced 6 local modules that never existed in the repo; it was stripped to only working commands.
+- [Buzzy OTP code entry](buzzy-otp-code-entry.md) — verify the code screen actually advances after clicking Next; don't sleep-and-hope in multi-step browser automation.
