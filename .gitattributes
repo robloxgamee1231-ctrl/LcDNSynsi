@@ -1,0 +1,8 @@
+project.zip filter=lfs diff=lfs merge=lfs -text
+project_code.zip filter=lfs diff=lfs merge=lfs -text
+workspace.zip filter=lfs diff=lfs merge=lfs -text
+workspace_part_01 filter=lfs diff=lfs merge=lfs -text
+workspace_part_02 filter=lfs diff=lfs merge=lfs -text
+workspace_part_03 filter=lfs diff=lfs merge=lfs -text
+workspace_part_04 filter=lfs diff=lfs merge=lfs -text
+workspace_part_05 filter=lfs diff=lfs merge=lfs -text
