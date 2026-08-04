@@ -108,7 +108,7 @@ from progress import ProgressTracker
 # ── Optional modules (require playwright — not available on Android/Termux) ────
 _PLAYWRIGHT_AVAILABLE = True
 try:
-    import artlist_bot as _art
+    from artlist import artlist_bot as _art
     import synthesia_bot as _syn
     import sd2_bot as _sd2
     import bypass as _bypass

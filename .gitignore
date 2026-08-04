@@ -71,5 +71,9 @@ __pycache__/
 env/
 venv/
 
+# Environment files (tokens / API keys)
+.env
+.env.local
+
 # Logs
 *.log
