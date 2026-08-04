@@ -720,9 +720,18 @@ _ARTLIST_IMAGE_URL = "https://toolkit.artlist.io/new?mode=image"
 _ARTLIST_EMAIL     = os.environ.get("ARTLIST_EMAIL", "")
 _ARTLIST_PASSWORD  = os.environ.get("ARTLIST_PASSWORD", "")
 
-_CHROMIUM_BIN = (
-    "/nix/store/qa9cnw4v5xkxyip6mb9kxqfq1z4x2dx1-chromium-138.0.7204.100/bin/chromium"
-)
+# Auto-detect chromium — works locally, on replit, and everywhere else.
+# Falls back to None which lets playwright find its own binary.
+_CHROMIUM_BIN = None
+if os.path.exists("/nix/store"):
+    # Replit nix environment
+    _nix_candidates = [
+        "/nix/store/qa9cnw4v5xkxyip6mb9kxqfq1z4x2dx1-chromium-138.0.7204.100/bin/chromium",
+    ]
+    for c in _nix_candidates:
+        if os.path.isfile(c):
+            _CHROMIUM_BIN = c
+            break
 
 # Cookies are saved here after a successful login and reused on every run
 _COOKIES_FILE = Path(__file__).parent / ".artlist_session.json"
@@ -5100,8 +5109,9 @@ async def generate_artlist_image(
     snap     = screenshot_cb
 
     async def _new_browser(pw):
+        _launch_kw = {"executable_path": _CHROMIUM_BIN} if _CHROMIUM_BIN else {}
         browser = await pw.chromium.launch(
-            executable_path=_CHROMIUM_BIN,
+            **_launch_kw,
             headless=True,
             args=[
                 "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu",
@@ -5212,8 +5222,9 @@ async def generate_artlist_video(
     snap     = screenshot_cb
 
     async def _new_browser(pw):
+        _launch_kw = {"executable_path": _CHROMIUM_BIN} if _CHROMIUM_BIN else {}
         browser = await pw.chromium.launch(
-            executable_path=_CHROMIUM_BIN,
+            **_launch_kw,
             headless=True,
             args=[
                 "--no-sandbox",

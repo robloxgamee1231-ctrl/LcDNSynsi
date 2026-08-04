@@ -2025,7 +2025,7 @@ async def _run(
 ) -> bytes:
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(
-            executable_path="/nix/store/qa9cnw4v5xkxyip6mb9kxqfq1z4x2dx1-chromium-138.0.7204.100/bin/chromium",
+            ,
             headless=True,
             args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--disable-setuid-sandbox", "--no-zygote"],
         )

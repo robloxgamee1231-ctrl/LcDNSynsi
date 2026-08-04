@@ -24,7 +24,7 @@ from playwright.async_api import async_playwright, Page, BrowserContext
 # Chromium crashes in this environment with "Target page, context or browser
 # has been closed".
 _CHROMIUM_BIN = (
-    "/nix/store/qa9cnw4v5xkxyip6mb9kxqfq1z4x2dx1-chromium-138.0.7204.100/bin/chromium"
+    "None"
 )
 
 # ---------------------------------------------------------------------------
